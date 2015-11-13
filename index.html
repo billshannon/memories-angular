@@ -12,14 +12,33 @@
 </head>
 <body ng-controller="MemoriesController">
 
+<div class="content-block blog-1">
+    <div class="container text-center">
 
-<div ng-repeat="memory in memories">
-    {{memory.old_days}}
-    {{memory.these_days}}
-    {{memory.year}}
+        <div class="underlined-title">
+            <div class="editContent">
+                <h1>Memories Theory</h1>
+            </div>
+        </div>
 
+        <div ng-repeat="memory in memories" class="col-sm-10 col-sm-offset-1">
+
+            <div class="post">
+                <div class="editContent">
+                    <h2><a href="#">{{memory.year}}</a></h2>
+                </div>
+                <div class="editContent">
+                    <p>{{memory.old_days}}</p>
+
+                    <p>{{memory.these_days}}</p>
+                </div>
+            </div>
+
+            <hr><!---->
+        </div><!-- /.col-sm-10 -->
+
+    </div><!-- /.container -->
 </div>
-
 
 </body>
 </html>
